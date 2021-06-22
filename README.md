@@ -2,8 +2,7 @@
 
 The files in this repository were used to configure the network depicted below.
 
-![Image of diagram]
-(https://github.com/drpeters83/ELK-Project/blob/main/Diagrams/Lab-diagram.pdf)
+![docker ps image](https://github.com/drpeters83/ELK-Project/blob/main/Diagrams/Lab-diagram.pdf)
 
 These files have been tested and used to generate a live ELK deployment on Azure. They can be used to either recreate the entire deployment pictured above. Alternatively, select portions of the ansible file may be used to install only certain pieces of it, such as Filebeat.
 
@@ -94,11 +93,15 @@ In order to use the playbook, you will need to have an Ansible control node alre
 
 SSH into the control node and follow the steps below:
 - Copy the filebeat-config.yml file to etc/filebeat/filebeat.yml.
-- Update the filebeat.yml file to include 'Enable and Configure System Module' and 'filebeat setup' and 'start filebeat' commands. Run ansible-playbook filebeat-playbook.yml. You should see the following on the command line. 
+- Update the filebeat.yml file to include 'Enable and Configure System Module' and 'filebeat setup' and 'start filebeat' commands. Run ansible-playbook filebeat-playbook.yml. You should see the following on the command line:
+
+![docker ps image]<img width="891" alt="Running filebeat" src="https://user-images.githubusercontent.com/26662275/122965534-873c1d00-d345-11eb-98c6-1f544faff05b.png">
+
 
 
 - Run the playbook, and navigate to http://[your.VM.IP]:5601/app/kibana to check that the installation worked as expected. Click on module status and then check data. You should see the following on the screen:
 
+![docker ps image]<img width="888" alt="Filebeat check data" src="https://user-images.githubusercontent.com/26662275/122965563-915e1b80-d345-11eb-9e9f-41d2339a493b.png">
 
 
 
